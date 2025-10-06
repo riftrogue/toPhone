@@ -36,7 +36,7 @@ fi
 
 # Check if any arguments are provided
 if [ $# -eq 0 ]; then
-    echo "Error: No files specified."
+    echo "❌Error: No files specified."
     echo "Usage: toGallary <file1> [file2 ...]"
     exit 1
 fi
@@ -45,9 +45,9 @@ fi
 for file in "$@"; do
     if [ -f "$file" ]; then
         mv "$file" /sdcard/termux/
-        echo "Moved $file to /sdcard/termux/"
+        echo "✅Moved $file to /sdcard/termux/"
     else
-        echo "Error: $file not found or is not a file."
+        echo "❌Error: $file not found or is not a file."
     fi
 done
 ```

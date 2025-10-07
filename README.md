@@ -1,4 +1,4 @@
-# 📂 toGallary Script for Termux
+# 📂 toGallary, A simple Script for Termux
 
 ## 📝 Description
 

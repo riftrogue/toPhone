@@ -1,10 +1,10 @@
-# 📂 toGallary, A simple Script for Termux
+#  toGallary, A simple Script for Termux
 
-## 📝 Description
+##  Description
 
 The `toGallary` script is a simple Termux utility that moves one or multiple files from your current Termux directory to the phone's local storage at `/sdcard/termux`. This is useful for quickly transferring files like images, videos, or documents to a folder accessible by your phone's gallery or file manager.
 
-## 🔑 Grant Storage Permission
+##  Grant Storage Permission
 
 Before using the script, ensure Termux has access to your phone's storage. Run the following command:
 
@@ -22,7 +22,7 @@ To create the `toGallary` script, open a new file in `nano`:
 nano ~/toGallary
 ```
 
-## 🖥️ The Script
+##  The Script
 
 Copy and paste the following script into the `nano` editor:
 
@@ -68,7 +68,7 @@ Make the script executable by running:
 chmod +x ~/toGallary
 ```
 
-## 🚀 How to Use
+##  How to Use
 
 1. Place the script in your Termux home directory (`/data/data/com.termux/files/home`) or add it to your PATH.
 2. Run the script with one or more files as arguments.
@@ -95,10 +95,10 @@ Moved image2.png to /sdcard/termux/
 Moved video.mp4 to /sdcard/termux/
 ```
 
-## 📍 Output Location
+##  Output Location
 
-All files moved by the script will be located in `/sdcard/termux/`. You can access this folder using your phone's file manager or gallery app. 🗂️
+All files moved by the script will be located in `/sdcard/termux/`. You can access this folder using your phone's file manager or gallery app. 
 
-## 🎉 Done
+##  Done
 
-Your `toGallary` script is ready to use! Enjoy seamless file transfers from Termux to your phone's storage. 😊
+Your `toGallary` script is ready to use! Enjoy seamless file transfers from Termux to your phone's storage. 

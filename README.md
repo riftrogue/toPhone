@@ -52,4 +52,4 @@ Run this once for storage permission:
 
 To get the latest version, just re-run the installation command.
 
-Made with ❤️ for Termux users
+

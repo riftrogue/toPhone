@@ -1,0 +1,43 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Self-uninstall
+if [ "$1" = "uninstall" ]; then
+    rm "$0"
+    echo "Uninstalled toPhone successfully."
+    exit 0
+fi
+
+ACTION="cp"
+ACTION_NAME="Copied"
+
+if [[ "$1" == "-m" || "$1" == "--move" || "$1" == "m" ]]; then
+    ACTION="mv"
+    ACTION_NAME="Moved"
+    shift
+fi
+
+if [ ! -d "/sdcard/termux" ]; then
+    mkdir -p /sdcard/termux
+fi
+
+if [ $# -eq 0 ]; then
+    echo "Error: No files specified."
+    echo ""
+    echo "Usage:"
+    echo "  toPhone file1.mp3 file2.m4a     # Copy files (default)"
+    echo "  toPhone m *.mp3                 # Move all .mp3 files"
+    echo "  toPhone -m file1.mp3            # Move specific files"
+    echo "  toPhone --move video.mp4        # Move with long flag"
+    echo ""
+    echo "Files will be placed in /sdcard/termux (visible in gallery/file manager)"
+    exit 1
+fi
+
+for file in "$@"; do
+    if [ -f "$file" ]; then
+        $ACTION "$file" /sdcard/termux/
+        echo "$ACTION_NAME $file to /sdcard/termux/"
+    else
+        echo "Error: '$file' not found or is not a regular file."
+    fi
+done

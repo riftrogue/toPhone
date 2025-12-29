@@ -18,13 +18,13 @@ Run this single command in Termux:
 
 ## Usage
 
-Copy files (default - recommended):
+Copy files (default):
 
     toPhone song.mp3 photo.jpg
     toPhone *.m4a
     toPhone Downloads/*
 
-Move files instead (deletes from Termux after transfer):
+Move files instead:
 
     toPhone m *.mp3          # fastest way
     toPhone -m file1.mp3
